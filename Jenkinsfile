@@ -3,7 +3,9 @@ pipeline {
     agent any
     stages {
         stage ('--validate--') {
-          if(isUnix()) {
+        script {
+            
+             if(isUnix()) {
              
              sh "mvn validate"  
           
@@ -13,14 +15,19 @@ pipeline {
              bat "mvn validate" 
           
           }
+        
+        }
+
+         
 
             
    
         }
         
-        satge ('--compile--') {
-                  
-                  if(isUnix()) {
+        stage ('--compile--') {
+        script {
+            
+            if(isUnix()) {
                       
                      sh "mvn compile" 
                   
@@ -34,10 +41,16 @@ pipeline {
                     
                   
               }
+        
+        }
+
+                  
+                  
               
               stage('--package--') {
+              script {
                   
-                  if(isUnix()) {
+                   if(isUnix()) {
                       
                       sh "mvn package"
                       
@@ -47,12 +60,18 @@ pipeline {
                       bat "mvn package"
                       
                   }
+              
+              }
+
+                  
+                 
 
 
               }
               stage ('--install--') {
-                        
-                        if(isUnix()) {
+              script {
+                  
+                   if(isUnix()) {
                             
                             sh "mvn install"
                             
@@ -62,6 +81,10 @@ pipeline {
                             bat "mvn install"
                             
                         }
+              }
+
+                        
+                       
 
 
                     }
