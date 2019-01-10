@@ -3,7 +3,9 @@ pipeline {
     agent any
     stages {
         stage ('--validate--') {
-        script {
+         steps {
+            
+              script {
             
              if(isUnix()) {
              
@@ -22,10 +24,14 @@ pipeline {
 
             
    
+         }
         }
+
+      
         
         stage ('--compile--') {
-        script {
+        steps {
+            script {
             
             if(isUnix()) {
                       
@@ -45,10 +51,16 @@ pipeline {
         }
 
                   
+            
+        }
+
+        
                   
               
               stage('--package--') {
-              script {
+              steps {
+                  
+                  script {
                   
                    if(isUnix()) {
                       
@@ -67,9 +79,14 @@ pipeline {
                  
 
 
+               } 
               }
+
+             
               stage ('--install--') {
-              script {
+              steps {
+                  
+                 script {
                   
                    if(isUnix()) {
                             
@@ -93,5 +110,9 @@ pipeline {
 
 
     }
+                  
+              
+              }
 
+              
 }
