@@ -5,7 +5,7 @@ pipeline {
         stage ('--validate--') {
          steps {
             
-              script {
+             script {
             
              if(isUnix()) {
              
@@ -18,7 +18,7 @@ pipeline {
           
           }
         
-        }
+        } 
 
          
 
