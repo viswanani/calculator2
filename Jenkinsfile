@@ -1,7 +1,7 @@
 pipeline {
     
     agent any
-    satges {
+    stages {
         stage ('--validate--') {
           if(isUnix()) {
              
