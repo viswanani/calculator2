@@ -2,6 +2,30 @@ pipeline {
     
     agent any
     stages {
+    stage ('--clean--') {
+              
+              steps {
+                  
+                  script {
+                      
+                      if(isUnix()) {
+                          
+                          sh "mvn clean"
+                      
+                      }
+                      else {
+                          
+                          bat "mvn clean"
+                      
+                      }
+
+
+                  }
+
+              }
+
+          }
+
         stage ('--validate--') {
          steps {
             
