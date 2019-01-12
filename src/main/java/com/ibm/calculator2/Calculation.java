@@ -19,7 +19,8 @@ public class Calculation {
 		System.out.println("\n enter your choice of calculation");
 		System.out.println("\n 1 for addition");
 		System.out.println("\n 2 for mutltiplication");
-		System.out.println("\n 3 for subtraction\n");
+		System.out.println("\n 3 for subtraction");
+		System.out.println("\n 4 for division");
 		Calculation calobj = new Calculation();
 		
 		int a =calobj.a;
@@ -41,6 +42,10 @@ public class Calculation {
 			int out3=a-b;
 			System.out.println("the subtraction value is  " + out3);
 			break;
+		case 4:
+		    int out4=a/b;
+		    System.out.println("the division value is  " + out4);
+		    break;
 			default:
 				System.out.println("give the proper calculation option ");
 		}
