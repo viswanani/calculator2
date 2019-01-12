@@ -8,7 +8,8 @@ pipeline {
                   
                   script {
                       
-                      if(isUnix()) {
+                      if(isUnix())
+                       {
                           
                           sh "mvn clean"
                       
