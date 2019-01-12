@@ -18,7 +18,8 @@ public class Calculation {
 		System.out.println("\n enter the variables");
 		System.out.println("\n enter your choice of calculation");
 		System.out.println("\n 1 for addition");
-		System.out.println("\n 2 for mutltiplication\n");
+		System.out.println("\n 2 for mutltiplication");
+		System.out.println("\n 3 for subtraction\n");
 		Calculation calobj = new Calculation();
 		
 		int a =calobj.a;
@@ -30,11 +31,15 @@ public class Calculation {
 		{
 		case 1:
 			int out=a+b;
-			System.out.println("tha additional value of " +out);
+			System.out.println("tha additional value of  " +out);
 			break;
 		case 2:
 			int out2=a*b;
-			System.out.println("the multiplication value is" + out2);
+			System.out.println("the multiplication value is  " + out2);
+			break;
+		case 3:
+			int out3=a-b;
+			System.out.println("the subtraction value is  " + out3);
 			break;
 			default:
 				System.out.println("give the proper calculation option ");
