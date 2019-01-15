@@ -2,6 +2,40 @@ pipeline {
     
     agent any
     stages {
+    stage ('--push the branches--') {
+       
+       steps {
+       script {
+           
+           if(isUnix()) {
+               
+               sh "git pull origin"
+               sh "git push origin --all"
+           
+           }
+           else {
+               
+           bat "git pull origin" 
+           sh  "git push origin --all"   
+           
+           }
+
+
+       }
+
+           
+       }
+
+                       }
+
+    stage ('--SCM CHeckout--') {
+        
+        steps {
+            git branch: 'multi' , credentialsId:'viswanani' , GitUrl:'https://github.com/viswanani/calculator2.git'
+        }
+
+    }
+    
     stage ('--clean--') {
               
               steps {
