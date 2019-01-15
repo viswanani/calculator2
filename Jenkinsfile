@@ -9,13 +9,13 @@ pipeline {
            
            if(isUnix()) {
                
-               sh "git pull origin"
+               sh "git pull origin master"
                sh "git push origin --all"
            
            }
            else {
                
-           bat "git pull origin" 
+           bat "git pull origin master" 
            sh  "git push origin --all"   
            
            }
