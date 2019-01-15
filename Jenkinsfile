@@ -31,7 +31,7 @@ pipeline {
     stage ('--SCM CHeckout--') {
         
         steps {
-            git branch: 'multi' , credentialsId:'viswanani' , GitUrl:'https://github.com/viswanani/calculator2.git'
+            git branch: 'multi' , credentialsId:'viswanani' , Giturl:'https://github.com/viswanani/calculator2.git'
         }
 
     }
